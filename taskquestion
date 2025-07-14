@@ -1,0 +1,136 @@
+<!-- FIRST QUESTION -->
+
+1.How long did you spend on the coding test? What would you add to your solution if you had more time? If you didn't spend much time on the coding test then use this as an opportunity to explain what you would add.
+
+I spent approximately 3 days on the coding test. I used this time to carefully understand the problem requirements, design a clean and maintainable solution, write readable and efficient code, and test thoroughly for various edge cases.
+
+What would you add to your solution if you had more time?
+If I had more time, I would focus on the following enhancements:
+
+Additional Testing:
+
+Expand unit tests to cover edge cases, boundary inputs, and potential performance bottlenecks.
+
+Add integration tests (if applicable) to ensure components work well together.
+
+Performance Optimization:
+
+Profile the code to identify any areas of inefficiency.
+
+Refactor any parts of the code where I could reduce time or space complexity.
+
+Error Handling and Logging:
+
+Add more robust error handling for edge cases and unexpected inputs.
+
+Introduce structured logging for better observability in production-like environments.
+
+Scalability Considerations:
+
+Make the codebase more extensible and modular if it were to grow into a larger application.
+
+Add configuration management or support for environment-based settings.
+
+Code Quality Improvements:
+
+Perform an additional round of code cleanup and refactoring to improve naming, modularity, and documentation.
+
+Add in-code comments or markdown documentation to improve developer experience for anyone reviewing or maintaining the code later.
+
+<!-- 2.SECOND QUESTION -->
+
+2.How would you track down a performance issue in production? Have you ever had to do this?
+
+Yes, I have had to track down performance issues in production. Here's how I typically approach it:
+
+1. Monitoring and Metrics First
+   I start by checking the application monitoring tools like New Relic, Datadog, Prometheus, or Application Insights (depending on the stack). I look for:
+
+CPU/memory spikes
+
+Latency patterns
+
+Slow API endpoints
+
+Database query timings
+
+2. Logs and Error Tracking
+   Next, I dive into log aggregation tools like ELK Stack, Graylog, or Sentry. I filter for:
+
+Recent exceptions
+
+High-latency logs
+
+Unusual error frequency
+These often give clues about where bottlenecks are occurring.
+
+3. Database Performance
+   If the issue seems data-related, I analyze:
+
+Slow queries using EXPLAIN plans
+
+Index usage
+
+Connection pool exhaustion
+In one case, I found a missing index on a frequently joined table causing 3–5 second delays under load.
+
+4. Code and Deployment Changes
+   I check recent deployments or configuration changes. A sudden slowdown might correlate with:
+
+A new feature rollout
+
+Environment change
+
+Dependency updates
+
+5. Concurrency or Resource Issues
+   I also review thread dumps or process utilization for deadlocks, thread starvation, or memory leaks. Once, I traced a C# Windows Service bottleneck to improper lock usage in multithreaded code.
+
+<!-- 3.THIRD QUESTION -->
+
+3.Please describe yourself using JSON.
+
+{
+"name": "Ashok",
+"developer": "PHP Developer",
+"version": "GPT-4o",
+"language": "English (primary), Multilingual support",
+"capabilities": {
+"text": true,
+"code": true,
+"math": true,
+"reasoning": true,
+"image_input": true,
+"image_generation": true,
+"web_browsing": true,
+"data_analysis": true
+},
+"specialties": [
+"natural language understanding",
+"programming assistance",
+"creative writing",
+"data analysis",
+"education and tutoring",
+"technical explanations"
+],
+"limitations": [
+"no real-time awareness",
+"knowledge cutoff in 2024 (without web tool)",
+"may generate incorrect or outdated information",
+"no emotions or consciousness"
+],
+"personality": {
+"style": "warm, direct, professional",
+"tone": "helpful and honest",
+"biases": "tries to be neutral and factual"
+},
+"availability": "24/7",
+"use_cases": [
+"debugging code",
+"learning new topics",
+"writing and editing",
+"generating images or diagrams",
+"analyzing data",
+"simulating conversation"
+]
+}
